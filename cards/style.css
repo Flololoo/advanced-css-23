@@ -1,0 +1,118 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-europe: #e10ac4;
+    --color-north-america: #e1760a;
+    --color-africa: #298303;
+
+    --main-background: #ffffff;
+    --font-color: black;
+    --background: white;
+}
+
+html {
+    background-color: var(--main-background);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #2f2f34;
+        --main-background: #4a4a50;
+        --font-color: white;
+    }
+}
+
+h2, h4, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--background);
+    color: var(--font-color);
+    position: relative;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: #00000045 0 0 4px 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card__headline,
+.card__subheadline{
+    text-align: center;
+}
+
+.card__text {
+    padding: 0 25px;
+    text-align: center;
+}
+
+.card__link {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.card__additional-infos {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: #fff;
+}
+
+.card__additional-infos-item {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.card__additional-infos-item:not(:last-child) {
+    border-right: 1px solid #fff;
+}
+
+.card--europe {
+    .card__additional-infos {
+        background-color: var(--color-europe);
+    }
+    .card__subheadline {
+        color: var(--color-europe);
+    }
+}
+
+.card--north-america {
+    .card__additional-infos {
+        background-color: var(--color-north-america);
+    }
+    .card__subheadline {
+        color: var(--color-north-america);
+    }
+}
+
+.card--africa {
+    .card__additional-infos {
+        background-color: var(--color-africa);
+    }
+    .card__subheadline {
+        color: var(--color-africa);
+    }
+}
+
+.card__link::after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}

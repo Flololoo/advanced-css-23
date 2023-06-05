@@ -1,0 +1,46 @@
+:root {
+    --color-red: #ff0000;
+    --color-green: #00d001;
+    --color-blue: #0750d2;
+    box-sizing: border-box;
+}
+
+
+.btn {
+    text-transform: uppercase;
+    border: 1px solid #eee;
+    background-color: unset;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+}
+
+.btn--large {
+    font-size: 2rem;
+    padding: 10px 15px;
+}
+
+.btn--red {
+    background-color: var(--color-red);
+    color: #fff;
+
+    .btn__price {
+        color: #e00000;
+        background-color: #940101;
+    }
+}
+
+.btn__price {
+    padding: 6px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-right: 10px;
+}
+
+.btn--green {
+    background-color: var(--color-green);
+    color: #fff;
+}
+.btn--blue {
+    background-color: var(--color-blue);
+    color: #fff;
+}
