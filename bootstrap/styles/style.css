@@ -1,0 +1,37 @@
+.hero-area__btn {
+    background: linear-gradient(90deg, rgb(134 17 186) 0%, rgb(231 13 218) 100%);
+    color: #fff;
+    border: none;
+}
+
+.hero-area__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-area__text-area {
+    margin: 10px 0;
+}
+
+@media all and (min-width: 768px) {
+    .hero-area__text-area {
+        margin: 100px 0;
+    }
+}
+
+
+.travel-links {
+    transform: translateY(-30px);
+}
+
+.travel-links__link, .header__navbar {
+    box-shadow: 2px 2px 8px 0px rgb(92 92 92 / 60%) ;
+}
